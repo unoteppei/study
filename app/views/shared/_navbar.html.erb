@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Vacation Rental</a>
+    <a class="navbar-brand" href="/"><span class="font1">Vacation Rental</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,6 +24,8 @@
       <ul class="navbar-nav" style="margin-left: 2rem;">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <figure style="position:relative; top: 0.2rem;" class="avatar <%= current_user.status ? "online" : "offline" %>"></figure>  
+          <%= image_tag avatar_url(current_user), class: "bd-placeholder-img figure-img img-fluid rounded-pill", style: "width: 40px; height: 30px;" %>          
             <%= current_user.full_name %>
           </a>
           <ul class="dropdown-menu">
