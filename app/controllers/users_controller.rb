@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
+  
   before_action :authenticate_user!
+  
   def dashboard
   end
+  
   def update
     @user = current_user
     if @user.update(current_user_params)
